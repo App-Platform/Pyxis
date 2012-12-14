@@ -63,10 +63,10 @@ $(document).bind('pageshow', function() {
 
   $(document).ready(function () {
 	var settings = {
-	  username: 'jimhunkinsent',
+	  username: 'pyxis.solutions1',
 	  maxresults: 50,
 	  mode: 'album',
-	  album: 'PyxisHomeTheaters',
+	  album: 'Web',
 	  thumbCrop: 1,
 	  showAlbumDescription: false,
 	};
@@ -75,43 +75,6 @@ $(document).bind('pageshow', function() {
 
 </script>
 
-<!-- Form Validation 
-<script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
-<script type="text/javascript">
-$(function() {
-	$( "#form1" ).validate({
-		submitHandler: function(form) {
-		   var data= $(form).serialize()
-		
-				$.ajax({
-				type: "POST",
-				url: "scripts/form.php",
-				//url: "http://joeytork.app-platform.net/scripts/form.php",
-				data: data,
-				success: function(){
-					$(form).fadeOut(1000);
-						  $('.thanks').fadeIn(1000);
-				}
-				});
-			return false;
-		}
-	});
-}); 	
-</script>
--->
-<!-- Form reset button 
-<script type="text/javascript">
-$(function() {
-	$('#reset_button').click(
-		function() { 
-			$('.thanks').fadeOut();
-			$('.form1').fadeIn(2500); 
-			$("#form1")[0].reset();
-		}
-	);
-}); 	
-</script>
--->
 </head> 
 
 <body>
@@ -120,6 +83,13 @@ $(function() {
 <div data-role="page" data-theme="a" id="home"> 
   <div data-role="header" data-theme="a" align="center">
     <img src="structure/logo.png" alt="Pyxis Solutions">
+	<div data-role="navbar" data-iconpos="top">
+		<ul>
+			<li><a href="#home" data-icon="home">Home</a></li>
+			<li><a href="#services" data-icon="grid">Services</a></li>
+			<li><a href="#contact" data-icon="email">Contact</a></li>
+		</ul>
+	</div><!-- /navbar -->  
   </div>
      
 	<div data-role="content">
@@ -136,7 +106,7 @@ $(function() {
                 <img src="structure/logo2.png">
             </div>
         
-            <div data-role="content" style="background-color:#ffffff">	
+            <div data-role="content" style="background-color:#fff">	
                 <h2>How does this work?</h2> 
                 <p>
                 <strong>Send a referral</strong><br>
@@ -154,11 +124,17 @@ $(function() {
             <div data-role="footer" align="center">
                 <a href="#" data-role="button" data-inline="true" data-theme="a" data-rel="back" data-icon="delete" style="margin-top:10px; margin-bottom:10px;">Close Window</a>
             </div>
-        </div>    
+        </div> 
         
 <div class="content-primary">
 
-		<br>
+		<br />
+		<br />
+        
+        <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Pyxis%20Solutions&body=%0D%0AFor%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email" data-transition="slide">Email General Referral</a>
+
+		<br />
+
         <strong>Security</strong>
         <div data-role="controlgroup">
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Security%20from%20Pyxis%20Solutions&body=%0D%0AClick%20the%20following%20link%20to%20view%20the%20Pyxis%20Solutions%20Security%20PDF%0D%0Ahttp%3A%2F%2Fpyxissolutions.com%2Fmarketing%2FSecurityCutSheet.pdf%0D%0A%0D%0AIf%20you%20would%20like%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email">Email Referral</a>
@@ -197,112 +173,48 @@ $(function() {
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/marketing/LiveTVCutSheet.pdf');">View PDF</a>
         </div>
         
-        <br />
-        
-        <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Pyxis%20Solutions&body=%0D%0AFor%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email" data-transition="slide">Email General Referral</a>
         
         </div>
+        
     	<br />
         <br />
         
 </div>
 <div class="content-secondary">
 
-        <a href="#services" data-role="button" data-icon="grid" data-transition="slide">Services</a>
-        
-        <br />
-        
-        <div data-role="collapsible" data-collapsed="true">
-            <h2>Contact</h2> 
-            <p>
-            Please contact us with any questions or if you would like to set up a walk through and estimate.<br />
-            <br />
-            <a href="tel:8883740092" data-role="button" data-icon="phone">888.374.0092 Phone/Fax</a>
-            <a href="mailto:info@pyxissolutions.com" target="_blank" data-icon="email" data-role="button"> info@pyxissolutions.com</a>
-            <a data-role="button" data-icon="home" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/home.htm');">PyxisSolutions.com</a>
-            <a data-role="button" data-icon="facebook" target="_blank" onClick="window.plugins.childBrowser.openExternal('https://www.facebook.com/PyxisSolutions');">Facebook</a>
-            <a data-role="button" data-icon="twitter" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://twitter.com/PyxisSolutions');">Twitter</a>
-            <br />
-            <br />
-            <strong>Alan Thomas</strong><br />
-            <div data-role="controlgroup">
-            <a href="tel:6122985595" data-role="button" data-icon="phone">612.298.5595</a>
-            <a href="mailto:alan@pyxissolutions.com" target="_blank" data-icon="email" data-role="button">alan@pyxissolutions.com</a>
-            </div>
-             </p>
-		</div>
-        
-    	<br />
-        <br />
-        
-</div> 
-<div class="content-primary">
-
         <strong>Examples of our work</strong>
         <div id="gallery_1"></div>
 
 </div>        
-
+        
         </p>
   </div> 
     
-  <div data-role="footer" data-theme="a">
-    <div class="footerText" align="center" style="margin-top:15px; margin-bottom:15px;">
-		<script type="text/javascript"> 
+    <div data-role="footer" data-theme="a">
+        <div class="footerText" align="center"><br />
+        <br />
+        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" style="margin-top:10px; margin-bottom:10px;" data-theme="a">Get your own app!</a>
+        <br />
+        <script type="text/javascript"> 
             copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
         </script>
-        <br /><br />
-		<a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" data-theme="a">Get your own app!</a>
-      </div>
+        </div>
     </div> 
 </div>
 
-<!-- Contact -->
-<div data-role="page" data-theme="a" id="contact">
-
-	<div data-role="header" data-theme="a" align="center">
-    	<img src="structure/logo2.png" alt="Pyxis Solutions">
-      	<a href="#home" data-theme="a" data-icon="arrow-l" data-transition="slide" data-iconpos="notext" style="margin-top:6px;">back</a>
-	</div>
-
-	<div data-role="content">
-        <h1>Contact</h1> 
-        <p>
-        Please contact us with any questions or if you would like to set up a walk through and estimate.<br />
-        <br />
-        <a href="tel:8883740092" data-role="button" data-icon="phone">888.374.0092 Phone/Fax</a>
-        <a href="mailto:info@pyxissolutions.com" target="_blank" data-icon="email" data-role="button"> info@pyxissolutions.com</a>
-        <a data-role="button" data-icon="home" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/home.htm');">PyxisSolutions.com</a>
-        <a data-role="button" data-icon="facebook" target="_blank" onClick="window.plugins.childBrowser.openExternal('https://www.facebook.com/PyxisSolutions');">Facebook</a>
-        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://twitter.com/PyxisSolutions');">Twitter</a>
-        <br />
-        <br />
-        <strong>Alan Thomas</strong><br />
-        <div data-role="controlgroup">
-        <a href="tel:6122985595" data-role="button" data-icon="phone">612.298.5595</a>
-        <a href="mailto:alan@pyxissolutions.com" target="_blank" data-icon="email" data-role="button">alan@pyxissolutions.com</a>
-        </div>
-        </p>
-  </div>
-
-	<div data-role="footer" data-theme="a">
-		&nbsp; <a href="#home" data-theme="a" data-icon="arrow-l" data-transition="slide" data-iconpos="notext" style="margin-top:6px;">back</a>
-     	<div class="footerText" align="center">
-        <script type="text/javascript"> 
-        	copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
-        </script>
-        <br /><br />
-		<a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" data-theme="a">Get your own app!</a>
-        </div>
-	</div>
-</div>
 
 <!-- Services -->
 <div data-role="page" data-theme="a" id="services">
 
 	<div data-role="header" data-theme="a" align="center">
-    	<img src="structure/logo2.png" alt="Pyxis Solutions">
-      	<a href="#home" data-theme="a" data-icon="arrow-l" data-transition="slide" data-iconpos="notext" style="margin-top:6px;">back</a>
+    	<img src="structure/logo.png" alt="Pyxis Solutions">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#services" data-icon="grid">Services</a></li>
+                <li><a href="#contact" data-icon="email">Contact</a></li>
+            </ul>
+        </div><!-- /navbar -->  
 	</div>
 
 	<div data-role="content">
@@ -538,13 +450,68 @@ $(function() {
   </div>
 
 	<div data-role="footer" data-theme="a">
-		&nbsp; <a href="#home" data-theme="a" data-icon="arrow-l" data-transition="slide" data-iconpos="notext" style="margin-top:6px;">back</a>
-      <div class="footerText" align="center">
+		<div class="footerText" align="center"><br />
+        <br />
+        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" style="margin-top:10px; margin-bottom:10px;" data-theme="a">Get your own app!</a>
+		<br />
         <script type="text/javascript"> 
         	copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
         </script>
-        <br /><br />
-		<a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" data-theme="a">Get your own app!</a>
+        </div>
+	</div>
+</div>
+
+
+<!-- Contact -->
+<div data-role="page" data-theme="a" id="contact">
+
+	<div data-role="header" data-theme="a" align="center">
+    	<img src="structure/logo.png" alt="Pyxis Solutions">
+        <div data-role="navbar" data-iconpos="top">
+            <ul>
+                <li><a href="#home" data-icon="home">Home</a></li>
+                <li><a href="#services" data-icon="grid">Services</a></li>
+                <li><a href="#contact" data-icon="email">Contact</a></li>
+            </ul>
+        </div><!-- /navbar -->  
+	</div>
+
+	<div data-role="content">
+        <h1>Contact</h1> 
+
+        <p>
+        Please contact us with any questions or if you would like to set up a walk through and estimate.<br />
+        </p>
+
+<div class="content-primary">
+        
+        <a href="tel:8883740092" data-role="button" data-icon="phone">888.374.0092 Phone/Fax</a>
+        <a href="mailto:info@pyxissolutions.com" target="_blank" data-icon="email" data-role="button"> info@pyxissolutions.com</a>
+        <a data-role="button" data-icon="home" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/home.htm');">PyxisSolutions.com</a>
+        <a data-role="button" data-icon="facebook" target="_blank" onClick="window.plugins.childBrowser.openExternal('https://www.facebook.com/PyxisSolutions');">Facebook</a>
+        <a data-role="button" data-icon="twitter" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://twitter.com/PyxisSolutions');">Twitter</a>
+        <br />
+        <br />
+</div>       
+<div class="content-secondary">
+        
+        <strong>Alan Thomas</strong><br />
+        <div data-role="controlgroup">
+        <a href="tel:6122985595" data-role="button" data-icon="phone">612.298.5595</a>
+        <a href="mailto:alan@pyxissolutions.com" target="_blank" data-icon="email" data-role="button">alan@pyxissolutions.com</a>
+        </div>
+</div>
+        
+  </div>
+
+	<div data-role="footer" data-theme="a">
+		<div class="footerText" align="center"><br />
+        <br />
+        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" style="margin-top:10px; margin-bottom:10px;" data-theme="a">Get your own app!</a>
+		<br />
+        <script type="text/javascript"> 
+        	copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
+        </script>
         </div>
 	</div>
 </div>
