@@ -10,70 +10,28 @@
 <meta content='True' name='HandheldFriendly' />
 <meta content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;' name='viewport' />
 <meta name="viewport" content="width=device-width" />
-<link rel="stylesheet" href="css/theme.css" />
-<link rel="stylesheet" href="css/app-platform.css" />
 
-<!-- Add jQuery -->
-<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+<!-- CSS -->
+<link type="text/css" rel="stylesheet" href="css/jquery.mobile.structure-1.3.0.min.css" />
+<link type="text/css" rel="stylesheet" href="css/custom-theme.css" />
+<link type="text/css" rel="stylesheet" href="css/jquery-mobile-fluid960.min.css" />
+<link type="text/css" rel="stylesheet" href="css/colorbox.css" />
+<link type="text/css" rel="stylesheet" href="css/pwi.css" />
+<link type="text/css" rel="stylesheet" href="css/app-platform.css" />
+
+<!-- ADD SCRIPTS -->
+
+<!-- Add jQuery / Mobile -->
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.3.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
+<script type="text/javascript" src="js/jquery.pwi.js"></script>
+<script type="text/javascript" src="js/app-platform.js"></script>
 
 <!-- Add PhoneGap -->
 <script type="text/javascript" src="phonegap.js"></script>
 <script type="text/javascript" src="childbrowser.js"></script>
-
-
-<!-- Call jQuery Mobile -->
-<script type="text/javascript" src="scripts/jquery.mobile-1.2.0.min.js"></script>
-<link rel="stylesheet" href="css/jquery.mobile.structure-1.2.0.min.css" />
-
-<!-- iOS add to home screen options -->
-<script type="text/javascript">
-var addToHomeConfig = {
-	animationIn: 'bubble',
-	animationOut: 'drop',
-	lifespan:100000,
-	touchIcon:true,
-};
-</script>
-<script type="text/javascript">
-$(document).bind('pageshow', function() {
-  var activePage = $('.page.ui-page-active');
-  activePage.find('input[placeholder], textarea[placeholder]').placeholder();
-});
-</script>
-
-<!-- Reflow layout, Form Placeholder, iOS home screen popup -->
-<script type="text/javascript" src="scripts/app-platform.js"></script>
-
-<script>
-	$(function() {
-	$('input, textarea').placeholder();
-	});
-</script>
-
-<!-- colorbox -->
-<link rel="stylesheet" href="lightbox/colorbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="lightbox/jquery.colorbox.js"></script>
-
-<!-- Picasa Web Integrator -->
-<link rel="stylesheet" href="lightbox/pwi.css" type="text/css"/>
-<script type="text/javascript" src="lightbox/jquery.pwi.js"></script>
-<script type="text/javascript" src="lightbox/jquery.blockUI.js"></script>
-
-<script type="text/javascript">
-
-  $(document).ready(function () {
-	var settings = {
-	  username: 'pyxis.solutions1',
-	  maxresults: 50,
-	  mode: 'album',
-	  album: 'Web',
-	  thumbCrop: 1,
-	  showAlbumDescription: false,
-	};
-	  $("#gallery_1").pwi(settings);
-  });
-
-</script>
 
 </head> 
 
@@ -82,7 +40,7 @@ $(document).bind('pageshow', function() {
 <!-- Home -->
 <div data-role="page" data-theme="a" id="home"> 
   <div data-role="header" data-theme="a" align="center">
-    <img src="structure/logo.png" alt="Pyxis Solutions">
+    <img src="img/logo.png" class="img" style="padding: 5px 0;" alt="Pyxis Solutions">
 	<div data-role="navbar" data-iconpos="top">
 		<ul>
 			<li><a href="#home" data-icon="home">Home</a></li>
@@ -90,20 +48,15 @@ $(document).bind('pageshow', function() {
 			<li><a href="#contact" data-icon="email">Contact</a></li>
 		</ul>
 	</div><!-- /navbar -->  
-  </div>
+  </div><!-- /header --> 
      
-	<div data-role="content">
-	  	<h1 align="center" style="color:#f9a108;"><a id="body" href="tel:8883740092">888.374.0092</a></h1>
-    	<p>
-        
-        <div align="center">
-        <a id="body" href="#help" data-rel="popup" data-position-to="window" data-transition="pop">How does this work?</a><br />
-        
+<div data-role="content">
+	  	
         <!-- Help Popup-->
         <div data-role="popup" id="help" data-overlay-theme="b" data-theme="a" style="max-width:500px;" class="ui-corner-all">
         
             <div data-role="header" data-theme="a" align="center">
-                <img src="structure/logo2.png">
+                <img src="img/logo2.png">
             </div>
         
             <div data-role="content" style="background-color:#fff">	
@@ -124,90 +77,78 @@ $(document).bind('pageshow', function() {
             <div data-role="footer" align="center">
                 <a href="#" data-role="button" data-inline="true" data-theme="a" data-rel="back" data-icon="delete" style="margin-top:10px; margin-bottom:10px;">Close Window</a>
             </div>
-        </div> 
-        
-<div class="content-primary">
+        </div><!-- /help -->
 
-		<br />
-		<br />
+
+        <h1 align="center"><a id="body" href="tel:8883740092">888.374.0092</a></h1>
+        
+        <p align="center">
+        <a id="body" href="#help" data-rel="popup" data-position-to="window" data-transition="pop">How does this work?</a>
+        </p>
+        
+<div class="container_12">
+    <div class="grid_6 ui-block960-a">
         
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Pyxis%20Solutions&body=%0D%0AFor%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email" data-transition="slide">Email General Referral</a>
 
-		<br />
-
-        <strong>Security</strong>
+        <p><br /><strong>Security</strong></p>
         <div data-role="controlgroup">
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Security%20from%20Pyxis%20Solutions&body=%0D%0AClick%20the%20following%20link%20to%20view%20the%20Pyxis%20Solutions%20Security%20PDF%0D%0Ahttp%3A%2F%2Fpyxissolutions.com%2Fmarketing%2FSecurityCutSheet.pdf%0D%0A%0D%0AIf%20you%20would%20like%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email">Email Referral</a>
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/marketing/SecurityCutSheet.pdf');">View PDF</a>
         </div>
         
-        <br />
-        
-        <strong>Smart Security</strong>
+        <p><br /><strong>Smart Security</strong></p>
         <div data-role="controlgroup">
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Smart%20Security%20from%20Pyxis%20Solutions&body=%0D%0AClick%20the%20following%20link%20to%20view%20the%20Pyxis%20Solutions%20Smart%20Security%20PDF%0D%0Ahttp%3A%2F%2Fpyxissolutions.com%2Fmarketing%2FSmartSecurityCutSheet.pdf%0D%0A%0D%0AIf%20you%20would%20like%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email">Email Referral</a>
+		<a href="http://pyxissolutions.com/marketing/SmartSecurityCutSheet.pdf" data-role="button" data-icon="info" data-transition="slide" target="_blank">View PDF</a> 
+        <!-- Phonegap external link
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/marketing/SmartSecurityCutSheet.pdf');">View PDF</a>
+        -->
         </div>
         
-        <br />
-        
-        <strong>Home Theater</strong>
+        <p><br /><strong>Home Theater</strong></p>
         <div data-role="controlgroup">
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Home%20Theater%20from%20Pyxis%20Solutions&body=%0D%0AClick%20the%20following%20link%20to%20view%20the%20Pyxis%20Solutions%20Home%20Theater%20PDF%0D%0Ahttp%3A%2F%2Fpyxissolutions.com%2Fmarketing%2FHomeTheaterCutSheet.pdf%0D%0A%0D%0AFor%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email" data-transition="slide">Email Referral</a>
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/marketing/HomeTheaterCutSheet.pdf');">View PDF</a>
         </div>
         
-        <br />
-        
-        <strong>Home Theater PC's</strong>
+        <p><br /><strong>Home Theater PC's</strong></p>
         <div data-role="controlgroup">
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Home%20Theater%20from%20Pyxis%20Solutions&body=%0D%0AClick%20the%20following%20link%20to%20view%20the%20Pyxis%20Solutions%20Home%20Theater%20PDF%0D%0Ahttp%3A%2F%2Fpyxissolutions.com%2Fmarketing%2FHomeTheaterCutSheet.pdf%0D%0A%0D%0AIf%20you%20would%20like%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email">Email Referral</a>
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/marketing/HTPCCutSheet.pdf');">View PDF</a>
         </div>
         
-        <br />
-        
-        <strong>Premium TV Solutions</strong>
+        <p><br /><strong>Premium TV Solutions</strong></p>
         <div data-role="controlgroup">
         <a href="mailto:?cc=referral%40pyxissolutions.com&subject=Premium%20TV%20Solutions%20from%20Pyxis%20Solutions&body=%0D%0AClick%20the%20following%20link%20to%20view%20the%20Pyxis%20Solutions%20Premium%20TV%20Solutions%20PDF%0D%0Ahttp%3A%2F%2Fpyxissolutions.com%2Fmarketing%2FPremiumTVCutSheet.pdf%20%0D%0A%0D%0AIf%20you%20would%20like%20more%20information%20about%20services%20offered%20by%20Pyxis%20Solutions%20please%20visit%20our%20website%20at%20www.pyxissolutions.com%20or%20contact%20us%20directly%20at%20888.374.0092%0D%0A%0D%0AWe%20look%20forward%20to%20working%20with%20you%20in%20the%20future!" data-role="button" data-icon="email">Email Referral</a>
         <a data-role="button" data-icon="info" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/marketing/LiveTVCutSheet.pdf');">View PDF</a>
         </div>
         
-        
-        </div>
-        
-    	<br />
-        <br />
-        
-</div>
-<div class="content-secondary">
+	</div><!-- /block a -->        
+    <div class="grid_6 ui-block960-b">
 
-        <strong>Examples of our work</strong>
+        <p><strong>Examples of our work</strong></p>
         <div id="gallery_1"></div>
-
-</div>        
-        
-        </p>
-  </div> 
+	
+    </div><!-- /block b -->
+</div><!-- /container -->     
+</div><!-- /content -->
     
-    <div data-role="footer" data-theme="a">
-        <div class="footerText" align="center"><br />
-        <br />
-        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" style="margin-top:10px; margin-bottom:10px;" data-theme="a">Get your own app!</a>
-        <br />
-        <script type="text/javascript"> 
+<div data-role="footer" data-theme="a">
+    <div class="footerText" align="center">
+        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" data-theme="a">Get your own app!</a>
+        <p><script type="text/javascript"> 
             copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
-        </script>
-        </div>
-    </div> 
-</div>
+        </script></p>
+    </div>
+</div><!-- /footer -->
+</div><!-- /home -->
 
 
 <!-- Services -->
 <div data-role="page" data-theme="a" id="services">
-
 	<div data-role="header" data-theme="a" align="center">
-    	<img src="structure/logo.png" alt="Pyxis Solutions">
+    	<img src="img/logo.png" class="img" style="padding: 5px 0;" alt="Pyxis Solutions">
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li><a href="#home" data-icon="home">Home</a></li>
@@ -215,44 +156,44 @@ $(document).bind('pageshow', function() {
                 <li><a href="#contact" data-icon="email">Contact</a></li>
             </ul>
         </div><!-- /navbar -->  
-	</div>
+	</div><!-- /header -->
 
-	<div data-role="content">
-      <h1>Services</h1> 
+<div data-role="content">
+<div class="container_12">
+    <div class="grid_12 ui-block960-a">
+    	<h1 class="bump">Services</h1> 
       
-      <p>
-      Tap on a heading to expand.
-      </p>
+        <p>Tap on a heading to expand.</p>
       
-      <div data-role="collapsible" data-collapsed="true">
-      <h2>Home Theater</h2>
-      <p>
-		<img src="structure/theater01.jpg" alt="Theater" align="right" style="margin-left:5px;" />
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Home Theater</h2>
+        <p>
+        <img src="img/theater01.jpg" alt="Theater" align="right" style="margin-left:5px;" />
         Let Pyxis Solutions help you achieve the true home theater experience. From the design to the installation and demonstration of your theater system, expert installers will ensure you are comfortable with your system before they leave, ensuring the best possible experience.<br />
         <br />
         Our products include:
         </p>
-      <ul>
-        <li>Plasma, LCD, and LED flat panel displays</li>
-        <li>Media Center PCs, Speakers, Receivers, and BluRay Players</li>
-        <li>Front Projectors and Projector Screens</li>
-        <li>Distributed Audio Systems and In-Wall controls</li>
-        <li>Lighting Control Systems and LED Lighting systems</li>
-        <li>iPod Integration Options</li>
-        <li>Home Automation Options</li>
-        <li>...and More</li>
-      </ul>
+        <ul>
+            <li>Plasma, LCD, and LED flat panel displays</li>
+            <li>Media Center PCs, Speakers, Receivers, and BluRay Players</li>
+            <li>Front Projectors and Projector Screens</li>
+            <li>Distributed Audio Systems and In-Wall controls</li>
+            <li>Lighting Control Systems and LED Lighting systems</li>
+            <li>iPod Integration Options</li>
+            <li>Home Automation Options</li>
+            <li>...and More</li>
+        </ul>
         <p>
         <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
         </p>
-      </div>  
+        </div>  
 	  
-      <div data-role="collapsible" data-collapsed="true">
-      <h2>Home Theater PC's</h2>
+        <div data-role="collapsible" data-collapsed="true">
+        <h2>Home Theater PC's</h2>
         <p><strong>
         Store ALL your media digitally<br />
         Never touch a disc again!</strong></p>
-		<img src="structure/htpcMovies2.jpg" alt="HTPC" align="right" style="margin-left:5px;" />
+        <img src="img/htpcMovies2.jpg" alt="HTPC" align="right" style="margin-left:5px;" />
         <ul>
         <li>Watch your movies</li>
         <li>View your photos</li>
@@ -264,54 +205,43 @@ $(document).bind('pageshow', function() {
         <br />
         <a href="http://www.youtube.com/watch?v=sJF5okt7KWQ" target="_blank" data-role="button">YouTube demo</a><br />
         <br />
-        <img src="structure/logos.png" alt="Logos" align="right" style="margin-left:5px;" />
+        <img src="img/logos.png" alt="Logos" align="right" style="margin-left:5px;" />
         <strong>Get a HTPC from Pyxis</strong><br />
         Easily back up and store all of your<br />
-        media including:
-        
-        </p>
+        media including:</p>
         <ul>
         <li>DVD's</li>
         <li>BluRay's</li>
         <li>CD's</li>
         <li>Photos</li>
         </ul>
-        <p>
-        <strong>Cutting edge technology at your fingertips!</strong>
-        </p>
+        <p><strong>Cutting edge technology at your fingertips!</strong></p>
         <ul>
         <li>Smart phone control</li>
         <li>Full web browser</li>
         <li>Expandable and upgradable</li>
         </ul>
-        
-        <p>
-        <strong>Pyxis Solutions HTPC Installation</strong><br />
-        Includes:
-        </p>
+        <p><strong>Pyxis Solutions HTPC Installation</strong><br />
+        Includes:</p>
         <ul>
         <li>Integration with your existing home theater</li>
         <li>Smart phone integration</li>
         <li>Demonstration and training</li>
         <li>Access to online guides and FAQ’s</li>
         </ul>
-        <p>
-        <span style="font-size:10px;">Note: We sell hardware with open source or freeware software pre installed and pre configured on it. The only software licence you will receive with your system is the Windows 7 Home Premium user license.</span><br />
+        <p><span style="font-size:10px;">Note: We sell hardware with open source or freeware software pre installed and pre configured on it. The only software licence you will receive with your system is the Windows 7 Home Premium user license.</span><br />
         <br />
-       	<a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
+        <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
         </p>	
-
         </div>
-
         
-      	<div data-role="collapsible" data-collapsed="true">
+        <div data-role="collapsible" data-collapsed="true">
         <h2>Security</h2>
         <p>
         <strong>We fix free security systems!</strong><br />
-		<br />
-        Basic System Includes:
-        </p>
-        <img src="structure/basicSecurity.png" alt="security" align="right" style="margin-left:5px;" />
+        <br />
+        Basic System Includes:</p>
+        <img src="img/basicSecurity.png" alt="security" align="right" style="margin-left:5px;" />
         <ul>
         <li>3 door contacts</li>
         <li>1 infrared motion detector</li>
@@ -323,11 +253,9 @@ $(document).bind('pageshow', function() {
         <li>System training</li>
         <li>Starting at $200 installed</li>
         </ul>
-        <p>
-        Optional Add-Ons from the basic system can include:
-        </p>
-        <img src="structure/upgrades.png" alt="security upgrades" align="right" style="margin-left:5px;" />
-		<ul>
+        <p>Optional Add-Ons from the basic system can include:</p>
+        <img src="img/upgrades.png" alt="security upgrades" align="right" style="margin-left:5px;" />
+        <ul>
         <li>Window sensors</li>
         <li>Glass break sensors</li>
         <li>Security screens: standard/large/patio</li>
@@ -337,19 +265,17 @@ $(document).bind('pageshow', function() {
         <li>Carbon monoxide detectors</li>
         <li>Low temp sensors</li>
         </ul>        
-        <p>
-        <strong>Also available</strong><br />
+        <p><strong>Also available</strong><br />
         Curtain Motions, Ceiling Motions, Beam Sensors, Pressure Pads, Wireless Keyfobs, Panic/Hold-Up Buttons, Strobe Light Alarm Indicators, Vibration Sensors, Drive Way Car Detect Sensors, 200’ Laser Detectors, Total Connect smart phone app.<br />
         <br />
-       	<a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
-      </p>
-      </div>
-      
-      	<div data-role="collapsible" data-collapsed="true">
+        <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
+        </p>
+        </div>
+        
+        <div data-role="collapsible" data-collapsed="true">
         <h2>Smart Security</h2>
-        <p>
-        <strong>Standard System Includes:</strong>
-        <img src="structure/smartSecurity.png" alt="smart security" align="right" style="margin-left:5px;" />
+        <p><strong>Standard System Includes:</strong>
+        <img src="img/smartSecurity.png" alt="smart security" align="right" style="margin-left:5px;" />
         </p>
         <ul>
         <li>Smart control panel</li>
@@ -376,7 +302,7 @@ $(document).bind('pageshow', function() {
         </ul>
         
         <p>
-        <img src="structure/smartAddOns.png" alt="smart add-ons" align="right" style="margin-left:5px;" />
+        <img src="img/smartAddOns.png" alt="smart add-ons" align="right" style="margin-left:5px;" />
         <strong>Smart Add-Ons</strong> from the standard system can include:<br />
         </p>
         <ul>
@@ -388,14 +314,14 @@ $(document).bind('pageshow', function() {
         <li>and much more!</li>
         </ul>
         <br />
-       	<a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
+        <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
         </p>
         </div>
-
-      <div data-role="collapsible" data-collapsed="true">
+        
+        <div data-role="collapsible" data-collapsed="true">
         <p>
         <h2>Central Vacuum</h2>
-        <img src="structure/CV.jpg" alt="central vac" align="right" style="margin-left:5px;" />
+        <img src="img/CV.jpg" alt="central vac" align="right" style="margin-left:5px;" />
         Benefits of a Central Vacuum System include better cleaning of your carpet deep down to remove dust, dirt, pet dander and other types of allergens with more vacuum power than a typical upright moveable vacuum. Improved indoor air quality by removing dirt and dust to a centralized location typically in a garage or mechanical room. Increased home value by as much as $2000 or more.<br />
         <br />
         Let Pyxis Solutions put the convenience of a Central Vacuum Sysem in your home.<br />
@@ -409,26 +335,26 @@ $(document).bind('pageshow', function() {
         <li>A Wide Variety of Accessories</li>
         <li>and more...</li>
         </ul>
-       	<a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
-      </div>
-      
-      <div data-role="collapsible" data-collapsed="true">
+        <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
+        </div>
+        
+        <div data-role="collapsible" data-collapsed="true">
         <h2>Construction</h2>
         <p>
-        <img src="structure/construction.jpg" alt="construction" align="right" style="margin-left:5px;" />
+        <img src="img/construction.jpg" alt="construction" align="right" style="margin-left:5px;" />
         What’s important to you when considering the wiring for the technologies of today in your new home project or remodel? Pyxis Solutions is always modifying our wiring scheme to best fit potential new technologies as they arise. Through the use of highest grade cabling, attention to cable integrity during the installation, and the addition of cable raceways in the walls to key locations, we assure that our customers are as prepared for the future as possible.<br />
         <br />
         We are proud to be flexible enough to satisfy some of the most exacting builders and remodelers in the industry while maintaining the ability to modify on the spot as needed for the home owner on any project. We prove our commitment to excellence on the jobsite through communication, punctuality, work area cleanliness, and building code compliance.<br />
         <br />
-       	<a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
+        <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
         </p>
         
-      </div>
+        </div>
         
-      <div data-role="collapsible" data-collapsed="true">
+        <div data-role="collapsible" data-collapsed="true">
         <h2>Automation</h2>
         <p>
-        <img src="structure/automation.png" alt="automation" align="right" style="margin-left:5px;" />
+        <img src="img/automation.png" alt="automation" align="right" style="margin-left:5px;" />
         Pyxis Solutions can add “pizzazz” and “wow-factor” for your convenience in everyday life. With many ideas of our own and working with you and whatever your imagination can come up with, we are proud to take the -Yes- approach to all your requests.<br />
         <br />
         Wouldn’t it be nice if some lights turned on when you pull into the driveway or pressed the button on your garage door opener.<br />
@@ -443,30 +369,29 @@ $(document).bind('pageshow', function() {
         <br />
         With your imagination to guide us, we can design almost anything to be automated and controllable.<br />
         <br />
-       	<a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
+        <a id="body" href="#contact" data-transition="slide"><strong>Contact us for more information</strong></a>
         </p>
-      </div>
-      
-  </div>
-
-	<div data-role="footer" data-theme="a">
-		<div class="footerText" align="center"><br />
-        <br />
-        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" style="margin-top:10px; margin-bottom:10px;" data-theme="a">Get your own app!</a>
-		<br />
-        <script type="text/javascript"> 
-        	copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
-        </script>
         </div>
-	</div>
-</div>
+
+	</div><!-- /block a -->     
+</div><!-- /container -->
+</div><!-- /content -->
+
+<div data-role="footer" data-theme="a">
+    <div class="footerText" align="center">
+    <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" data-theme="a">Get your own app!</a>
+    <p><script type="text/javascript"> 
+        copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
+    </script></p>
+    </div>
+</div><!-- /footer -->
+</div><!-- /services -->
 
 
 <!-- Contact -->
 <div data-role="page" data-theme="a" id="contact">
-
 	<div data-role="header" data-theme="a" align="center">
-    	<img src="structure/logo.png" alt="Pyxis Solutions">
+    	<img src="img/logo.png" class="img" style="padding: 5px 0;" alt="Pyxis Solutions">
         <div data-role="navbar" data-iconpos="top">
             <ul>
                 <li><a href="#home" data-icon="home">Home</a></li>
@@ -474,48 +399,84 @@ $(document).bind('pageshow', function() {
                 <li><a href="#contact" data-icon="email">Contact</a></li>
             </ul>
         </div><!-- /navbar -->  
-	</div>
+	</div><!-- /header -->
 
-	<div data-role="content">
-        <h1>Contact</h1> 
+<div data-role="content">
+<div class="container_12">
+    <div class="grid_6 ui-block960-a">
 
-        <p>
-        Please contact us with any questions or if you would like to set up a walk through and estimate.<br />
-        </p>
-
-<div class="content-primary">
+        <h1 class="bump">Contact</h1> 
+        <p>Please contact us with any questions or if you would like to set up a walk through and estimate.</p>
         
+        <p><strong>Alan Thomas</strong></p>
+        <div data-role="controlgroup">
+        <a href="tel:6122985595" data-role="button" data-icon="phone">612.298.5595</a>
+        <a href="mailto:alan@pyxissolutions.com" target="_blank" data-icon="email" data-role="button">alan@pyxissolutions.com</a>
+    	</div>
+        
+    </div><!-- / block a -->
+    <div class="grid_6 ui-block960-b">
+
+        <p><strong>General</strong></p>
         <a href="tel:8883740092" data-role="button" data-icon="phone">888.374.0092 Phone/Fax</a>
         <a href="mailto:info@pyxissolutions.com" target="_blank" data-icon="email" data-role="button"> info@pyxissolutions.com</a>
         <a data-role="button" data-icon="home" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://pyxissolutions.com/home.htm');">PyxisSolutions.com</a>
         <a data-role="button" data-icon="facebook" target="_blank" onClick="window.plugins.childBrowser.openExternal('https://www.facebook.com/PyxisSolutions');">Facebook</a>
         <a data-role="button" data-icon="twitter" target="_blank" onClick="window.plugins.childBrowser.openExternal('http://twitter.com/PyxisSolutions');">Twitter</a>
-        <br />
-        <br />
-</div>       
-<div class="content-secondary">
-        
-        <strong>Alan Thomas</strong><br />
-        <div data-role="controlgroup">
-        <a href="tel:6122985595" data-role="button" data-icon="phone">612.298.5595</a>
-        <a href="mailto:alan@pyxissolutions.com" target="_blank" data-icon="email" data-role="button">alan@pyxissolutions.com</a>
-        </div>
-</div>
-        
-  </div>
+	
+    </div><!-- /block b -->    
+</div><!-- /container --> 
+</div><!-- /content --> 
 
-	<div data-role="footer" data-theme="a">
-		<div class="footerText" align="center"><br />
-        <br />
-        <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" style="margin-top:10px; margin-bottom:10px;" data-theme="a">Get your own app!</a>
-		<br />
-        <script type="text/javascript"> 
-        	copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
-        </script>
-        </div>
-	</div>
-</div>
+<div data-role="footer" data-theme="a">
+    <div class="footerText" align="center">
+    <a href="mailto:?cc=info%40app-platform.net&subject=Get%20Your%20Own%20App!&body=Go%20to%20http%3A%2F%2Fapp-platform.net%20to%20find%20out%20how%20to%20get%20your%20own%20app!" target="_blank" data-icon="email" data-inline="true" data-role="button" data-theme="a">Get your own app!</a>
+    <p><script type="text/javascript"> 
+        copyright=new Date(); update=copyright.getFullYear(); document.write("&nbsp;Copyright &copy; 2003 - "+ update + " Pyxis Solutions, Inc.");
+    </script></p>
+    </div>
+</div><!-- /footer --> 
+</div><!-- /contact --> 
 
+
+<!-- Bump Headers -->
+<script>
+$(".grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12").find("p").css("margin-left", "10px");
+</script>
+
+<!-- Call Colorbox -->
+<script type="text/javascript">
+
+  $(document).one('pageshow', '#examples', function () {      
+    var settings = {
+      username: 'jimhunkinsent',
+      maxresults: 50,
+      mode: 'album',
+      album: 'AppPlatform',
+      thumbCrop: 1,
+      showAlbumDescription: false,
+    };
+      $("#gallery_1").pwi(settings);
+  });
+
+</script>
+
+<!-- Picasa Web Integrator -->
+<script type="text/javascript">
+
+  $(document).ready(function () {
+	var settings = {
+	  username: 'pyxis.solutions1',
+	  maxresults: 50,
+	  mode: 'album',
+	  album: 'Web',
+	  thumbCrop: 1,
+	  showAlbumDescription: false,
+	};
+	  $("#gallery_1").pwi(settings);
+  });
+
+</script>
 
 </body>
 </html>
